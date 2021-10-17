@@ -4,7 +4,7 @@
 
 The currency rate predictor uses ![freecurrency api](freecurrencyapi.net/) for accessing different currencies and their conversion rates with respect to USD and predicts possible rates for next 14 days. This is a time series prediciton implemented using facebook's Prophet model. The model is deployed to a Dash based web application hosted on Heroku.  
 
-- The web application can be viewed [here](https://protected-savannah-77193.herokuapp.com/).
+- The web application can be viewed [here](https://currency-predictor-app.herokuapp.com/).
 - Note that this project is still in progress and can be expanded to more currencies along with more accurate predictions.
 
 Currently supported currencies are:
