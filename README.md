@@ -31,18 +31,18 @@ Technology used:
 
 Landing Page:
 
-![Screenshot 1](/screenshots/Confidence_removed.png)
+![Screenshot 1](/Screenshots/Confidence_removed.png)
 
-![Screenshot 2](/screenshots/Tabular_prediction.png)
+![Screenshot 2](/Screenshots/Tabular_prediction.png)
 
 Graph View Changes:
 
-![Screenshot 1](/screenshots/Initial_value_changed.png)
+![Screenshot 1](/Screenshots/Initial_value_changed.png)
 
-![Screenshot 2](/screenshots/Region_select.png)
+![Screenshot 2](/Screenshots/Region_select.png)
 
 ### Project Structre
 ![Screenshot 1](/Screenshots/tree.png)
 
 ### Fowchart of Methodology:
-![Screenshot 1](/screenshots/Flowchart_of_methodology.png)
+![Screenshot 1](/Screenshots/Flowchart_of_methodology.png)
