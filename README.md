@@ -1,6 +1,6 @@
 # Currency Rate Predictor
 
-### View live at https://predict-currency.herokuapp.com
+### View live at https://currency-predictor-app.herokuapp.com/
 
 The currency rate predictor uses ![freecurrency api](freecurrencyapi.net/) for accessing different currencies and their conversion rates with respect to USD and predicts possible rates for next 14 days. This is a time series prediciton implemented using facebook's Prophet model. The model is deployed to a Dash based web application hosted on Heroku.  
 
