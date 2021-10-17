@@ -42,7 +42,7 @@ Graph View Changes:
 ![Screenshot 2](/Screenshots/Region_select.png)
 
 ### Project Structre
-![Screenshot 1](/Screenshots/tree.png)
+![Screenshot 1](/Screenshots/Tree.png)
 
 ### Fowchart of Methodology:
 ![Screenshot 1](/Screenshots/Flowchart_of_methodology.png)
