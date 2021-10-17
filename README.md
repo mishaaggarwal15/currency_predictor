@@ -31,21 +31,18 @@ Technology used:
 
 Landing Page:
 
-![Screenshot 1](/screenshots/app_ss1.png)
+![Screenshot 1](/screenshots/Confidence_removed.png)
 
-Chat Box:
+![Screenshot 2](/screenshots/Tabular_prediction.png)
 
-![Screenshot 1](/screenshots/app_ss2.png)
+Graph View Changes:
 
-Prediction functionality:
+![Screenshot 1](/screenshots/Initial_value_changed.png)
 
-![Screenshot 2](/screenshots/app_ss3.png)
-
----
-![Screenshot 3](/screenshots/app_ss4.png)
+![Screenshot 2](/screenshots/Region_select.png)
 
 ### Project Structre
-![Screenshot 1](/screenshots/ProjectStructure.png)
+![Screenshot 1](/Screenshots/tree.png)
 
 ### Fowchart of Methodology:
 ![Screenshot 1](/screenshots/Flowchart_of_methodology.png)
