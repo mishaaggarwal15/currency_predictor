@@ -75,14 +75,14 @@ def final_plot(df, forecast, currency, period):
     title_d = curr_dict[currency]
     forecast = forecast.round(2)
 
-    yhat = go.Scatter(x = forecast['ds'], y = forecast['yhat'], mode = 'lines', marker = {'color': '#3bbed7'},
+    yhat = go.Scatter(x = forecast['ds'], y = forecast['yhat'], mode = 'lines', marker = {'color': '#E7B8B7'},
                       line = {'width': 3}, name = 'Forecast',)
 
-    yhat_lower = go.Scatter(x = forecast['ds'], y = forecast['yhat_lower'], marker = {'color': 'rgba(30,129,176,0.75)'},
+    yhat_lower = go.Scatter(x = forecast['ds'], y = forecast['yhat_lower'], marker = {'color': 'rgba(178, 235, 241, 1)'},
                               showlegend = False, hoverinfo = 'none',)
 
     yhat_upper = go.Scatter(x = forecast['ds'], y = forecast['yhat_upper'], fill='tonexty',
-                            fillcolor = 'rgba(30,129,176,0.75)', name = 'Confidence', hoverinfo='none',mode = 'none')
+                            fillcolor = 'rgb(223, 143, 164, 0.75)', name = 'Confidence', hoverinfo='none',mode = 'none')
 
     actual = go.Scatter(x = df['ds'], y = df['y'], mode = 'markers', marker = {'color': '#21130d','size': 4,
         'line': {'color': '#000000','width': .75}}, name = 'Actual')
@@ -127,12 +127,18 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets,
                 suppress_callback_exceptions=True)
 server = app.server
                 
-colors = {"background": "#F3F6FA", "background_div": "white", 'text': '#009999'}
-app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[
-    html.H1('Currency Rate Forecast - Prophet Model', style={
+colors = {"background": "#EEF4F7", "background_div": "white", 'text': '#DF8FA4'}
+app.layout = html.Div(style={'marginTop': 0, 'backgroundColor': colors['background']}, children=[
+    html.H1('Currency Rate Predictor', style={
+            'textAlign': 'center',
+            'color': colors['text'],
+            'marginBottom': 8,'marginTop': 0
+        }),
+            html.P('Backtesting currency rates according to the currency value provided by the user.', style={
             'textAlign': 'center',
             'color': colors['text']
         }),
+
 html.Div([
     dcc.Tabs(id='tabs', value=curren[0], children=[
         dcc.Tab(label= curr_dict[curren[0]], value= curren[0], style={'textAlign': 'right'}),
@@ -148,15 +154,14 @@ html.Div([
     ]),
     html.Div([
     html.Br(),
-        html.Div([html.A('Developed by Zackriya Solutions', href='https://www.zackriya.com', target='_blank')]),
+        html.Div([html.A('Developed by Misha', href='https://github.com/mishaaggarwal15/currency_predictor', target='_blank')]),
         html.Br(),
       #  html.A("Homepage", href='/success'),
-    ],)
+    ],style = {'textAlign': 'center'})
 ])
 
-
 slider_app = html.Div([
-    html.P('Change initial value', className = 'fix_label', style = {'text-align': 'center', 'color': 'black'}),
+    html.P('Set initial value', className = 'fix_label', style = {'text-align': 'center', 'color': 'Grey'}),
     dcc.Slider(
         id='slider_app',
         min= 0,
@@ -165,19 +170,14 @@ slider_app = html.Div([
         value= 0,
         marks={i: str(i) for i in range(0, 140, 20)}
     ),
-   html.Div(id='updatemode-output-container', style={'margin-top': 20})
+   html.Div(id='updatemode-output-container', style={'margin-top': 10})
 ])
 
 @app.callback(
     dash.dependencies.Output('updatemode-output-container', 'children'),
     [dash.dependencies.Input('slider_app', 'value')])
 def slider_output(value):
-    return f'Selected Initial Value: {int(value)}'
-
-
-
-
-
+    return f'Selected Value: {int(value)}'
 
 
 fig_plot = html.Div(id='fig_plot')

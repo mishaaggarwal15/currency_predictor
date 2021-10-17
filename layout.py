@@ -15,7 +15,7 @@ def tab_layout(name, fig_plot, slider_app, out_table):
         ],),
         html.Br(),
         html.Div([
-    html.H4('Prediction for 14 days', style={'text-align':'center'})]),
+    html.H4('Prediction for next 14 days', style={'text-align':'center'})]),
         html.Div([out_table]),
         html.Div([
             html.H6(id='page-3-content')
