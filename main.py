@@ -128,7 +128,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets,
 server = app.server
                 
 colors = {"background": "#EEF4F7", "background_div": "white", 'text': '#DF8FA4'}
-app.layout = html.Div(style={'marginTop': 0, 'backgroundColor': colors['background']}, children=[
+app.layout = html.Div(style={'marginTop': 0,'marginBottom': 10, 'backgroundColor': colors['background']}, children=[
     html.H1('Currency Rate Predictor', style={
             'textAlign': 'center',
             'color': colors['text'],
@@ -136,7 +136,8 @@ app.layout = html.Div(style={'marginTop': 0, 'backgroundColor': colors['backgrou
         }),
             html.P('Backtesting currency rates according to the currency value provided by the user.', style={
             'textAlign': 'center',
-            'color': colors['text']
+            'color': colors['text'],
+            'marginBottom': 8,'marginTop': 0
         }),
 
 html.Div([
@@ -170,7 +171,7 @@ slider_app = html.Div([
         value= 0,
         marks={i: str(i) for i in range(0, 140, 20)}
     ),
-   html.Div(id='updatemode-output-container', style={'margin-top': 10})
+   html.Div(id='updatemode-output-container', style={'margin-top': 10, 'margin-bottom': 10})
 ])
 
 @app.callback(

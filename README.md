@@ -2,8 +2,10 @@
 
 ### View live at https://predict-currency.herokuapp.com
 
-The currency rate predictor uses ![freecurrency api](freecurrencyapi.net/) for accessing different currencies and their conversion rates with respect to USD and predicts possible rates for next 14 days. Time series predicitonis implemented using facebook's Prophet model.
+The currency rate predictor uses ![freecurrency api](freecurrencyapi.net/) for accessing different currencies and their conversion rates with respect to USD and predicts possible rates for next 14 days. This is a time series prediciton implemented using facebook's Prophet model. The model is deployed to a Dash based web application hosted on Heroku.  
 
+- The web application can be viewed [here](https://protected-savannah-77193.herokuapp.com/).
+- Note that this project is still in progress and can be expanded to more currencies along with more accurate predictions.
 
 Currently supported currencies are:
 
@@ -15,3 +17,35 @@ Currently supported currencies are:
 - Hongkong Dollar
 - Indian Rupee
 - Singapore Dollar
+
+Technology used:
+- python
+- sklearn
+- pandas
+- flask
+- plotly dash
+- jquery
+- heroku
+
+### Screenshots
+
+Landing Page:
+
+![Screenshot 1](/screenshots/app_ss1.png)
+
+Chat Box:
+
+![Screenshot 1](/screenshots/app_ss2.png)
+
+Prediction functionality:
+
+![Screenshot 2](/screenshots/app_ss3.png)
+
+---
+![Screenshot 3](/screenshots/app_ss4.png)
+
+### Project Structre
+![Screenshot 1](/screenshots/ProjectStructure.png)
+
+### Fowchart of Methodology:
+![Screenshot 1](/screenshots/Flowchart_of_methodology.png)
